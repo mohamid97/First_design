@@ -1,0 +1,48 @@
+/** the Main rules Repeat in My website ***/
+*{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing:border-box;
+    box-sizing: border-box;
+    --mainColor:#34495e;
+    --secondColor:#cf939d ;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.container{
+    margin: auto;
+    padding: 0 10px;
+}
+
+.padding-section{
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+
+/**** component **/
+.repeatedHeader{
+    text-align: center;
+    border-radius: 10px;
+    color: var(--mainColor);
+    font-size: 32px;
+    font-weight: bold !important;
+    opacity: .3;
+}
+@media(max-width:700px){
+    .repeatedHeader{
+        border-right: 2px solid var(--secondColor);
+        border-left: 2px solid var(--secondColor);
+        border-radius: 3px; 
+        font-size: 28px;
+    }
+}
+.repeatedHeader + p{
+    text-align: center;
+    color: var(--secondColor);
+    font-size: 10px;
+    font-weight: bold;
+    margin-top: -35px;
+}
+
+

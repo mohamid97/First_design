@@ -1,0 +1,390 @@
+.header{
+    background-color: var(--mainColor);
+    color: #FFF;
+    padding: 10px;
+  
+}
+.header .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 30px;
+}
+.header .links{
+    position: relative;
+}
+.header .links ul{
+    position: absolute;
+    list-style-type: none;
+    background-color: #7f8c8d;
+    top: 12px;
+    right: 0;
+    top: 17px;
+    padding: 10px;
+    width: 200px;
+    opacity: 0;
+    transition: .5s;
+    z-index: 3;
+}
+.header .links ul::before{
+    content: "";
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent transparent #7f8c8d transparent;
+    position: absolute;
+    top: -15px;
+    right: 0;
+}
+.header .links:hover ul{
+    opacity: 1;
+}
+.header .links span{
+   transition: all .5s;
+
+}
+.header .links:hover span{
+    display: block;
+    transform: rotate(360deg);
+}
+.header .links span{
+    cursor: pointer;
+}
+.header .links ul li {
+    padding: 10px 0;
+    border-bottom: 1px solid #CCC;
+}
+.header .links ul li:last-child{
+    border: 0;
+}
+.header .links ul li a{
+    text-decoration: none;
+    color: #FFF;
+    transition: .5s;
+}
+.header .links ul li:hover a{
+    padding: 10px;
+}
+
+/***************** start the landing paege *******/
+.landing{
+    width: 100%;
+    background-image: url('../img/2985860.jpg');
+    background-size: cover;
+    height: calc(100vh - 50px);
+    -moz-display: flex;
+    -webkit-display: flex;
+    -ms-display: flex;
+    display: flex;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    -ms-justify-content: center;
+    -moz-justify-content: center;
+    justify-content: center;
+
+}
+.landing .text {
+    -webkit-flex-basis: 50%;
+    -webkit-flex-basis: 50%;
+    -webkit-flex-basis:50%;
+        flex-basis: 50%;
+
+
+}
+.landing .text h1 {
+    padding: 0;
+    margin: 0;
+    font-weight: bold;
+    color: var(--mainColor);
+}
+.landing .text p{
+    line-height: 1.5;
+    font-size:17px;
+    color: #666;
+}
+
+/*********** start feature */
+.features .container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.features .container .feat{
+    text-align: center;
+    flex-basis: 300px;
+    padding: 0 10px;
+}
+.features .container .feat i{
+    color: var(--mainColor);
+    margin-bottom: 25px;
+}
+.features .container .feat h3{
+    font-weight: 800px;
+}
+.features .container .feat p{
+line-height: 1.7;
+font-size: 13px;
+color: #666;
+}
+
+/**** start services **/
+
+.services{
+    background-color: #EEE;
+}
+
+.services .services-content{
+
+    display: grid;
+    grid-template-columns: repeat(auto-fill , minmax(300px , 1fr));
+    gap: 30px;
+    margin-top: 100px;
+
+}
+
+.services .services-content .serv {
+    display: flex;
+    margin-bottom: 50px;
+}
+@media(max-width:700px){
+    .services .services-content .serv{
+        flex-direction: column;
+        text-align: center;
+
+    }
+ 
+
+}
+
+
+.services .services-content .serv i{flex-basis: 50px;
+color: var(--mainColor);
+}
+.services .services-content .serv .serv .ser-text{flex: 1;}
+
+.services .services-content .serv  h3{
+  margin-top: 0;
+}
+.services .services-content .serv p{
+    line-height: 1.7;
+    font-size: 13px;
+    color: #666;
+}
+.services .services-content .col .image{position: relative; width: 100%; height: 100%;}
+@media(max-width:1100px){
+    .services .services-content .col .image{
+        display: none;
+    }
+}
+.services .services-content .col .image::before{
+    content:'';
+    width: 70px;
+    position: absolute;
+    top: -30px;
+    right: 0;
+    background-color: var(--mainColor);
+    height: calc(100% + 50px);
+    z-index: 1;
+
+}
+.services .services-content img{
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+}
+
+/*** start prorofolio **/
+.protofolio .protofolio-details {
+    display: grid;
+    grid-template-columns: repeat(auto-fill , minmax(300px , 1fr));
+    gap: 10px;
+    margin-top: 100px;
+}
+.protofolio .protofolio-details .card .info{
+background-color: #EEE;
+padding: 20px 10px;
+margin-top: -5px;
+
+}
+.protofolio .protofolio-details .card .info h3{
+    margin: 0;
+}
+.protofolio .protofolio-details .card .info p{
+    font-size: 13px;
+    color: #666;
+    line-height: 1.7;
+}
+.protofolio .protofolio-details img{
+    width: 100%;
+    height:200px;
+
+}
+
+/********* start abou us ****/
+
+.aboutus .about-details{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 100px;
+    ;
+}
+
+.aboutus .about-details .image{
+    max-width: 300px;
+    max-height: 200px;
+    position: relative;
+}
+@media(max-width:780px){
+    .aboutus .about-details .image{
+        display: none;
+    }
+}
+
+.aboutus .about-details .image::after{
+    content: "";
+    width: 68px;
+    height: 133px;
+    border-bottom: -15px solid;
+    position: absolute;
+    top: -13px;
+    right: -83px;
+    z-index: -1;
+    border-bottom: 50px solid var(--mainColor);
+    border-left: 114px solid var(--mainColor);
+
+}
+.aboutus .about-details .image img{
+    width: 100%;
+    height: 100%;
+}
+.aboutus .about-details .text{
+    flex-basis: calc(100% - 450px);
+}
+@media(max-width:780px){
+    .aboutus .about-details .text{
+        flex:1;
+        text-align: center;
+    }
+}
+.aboutus .about-details .text p{
+    color: #777;
+    line-height: 1.7;
+    font-size:13px ;
+}
+.aboutus .about-details .text span{
+    color: var(--secondColor);
+    font-weight: bold;
+}
+
+/********* start  contact us **/
+.contact{
+    background-color: #EEE;
+}
+.contact .contact-details{
+    margin-top: 100px;
+    text-align: center;
+}
+.contact .contact-details p{
+    font-size: 23px;
+    letter-spacing: -2px;
+    color: #666;
+    font-weight: bold;
+
+}
+@media(max-width:700px){
+    .contact .contact-details p{
+        font-size: 17px;
+        font-weight: normal;
+
+    }
+}
+.contact .contact-details a{
+    text-decoration: none;
+    color: #666;
+    transition: all .5s;
+    font-weight: bold;
+    font-size: 19px;
+    opacity: .9;
+    margin-top: -13px;
+    display: block;
+}
+.contact .contact-details a:hover{
+    font-size: 20px;
+    opacity: 1;
+}
+.contact .contact-details .social-link{
+    margin-top: 30px;
+}
+.contact .contact-details .social-link i{
+margin-left: 10px;
+color: var(--mainColor)
+}
+/********** strat footer **/
+.footer{
+    background-color: var(--mainColor);
+    text-align: center;
+    padding: 30px 0 25px;
+    color: #FFF;
+ 
+}
+.footer span{
+    color: var(--secondColor);
+    font-weight: bold;
+ 
+}
+
+
+
+
+
+
+
+
+
+
+
+/*** start media for responsive ****/
+
+/* small screen */
+
+@media (max-width:650px) {
+    .features .container{
+        justify-content: center;
+    }
+    .features .container .feat{
+        flex-basis: 100%;
+        margin-bottom: 50px;
+    }
+    .features .container .feat i{
+        margin-bottom: -10px;
+    }
+    .landing .text{
+        flex-basis: 100%;
+        padding: 0 20px;
+    }
+}
+@media (min-width:768px) {
+    .container{
+        width:750px;
+    }
+
+
+}
+/** media screen **/
+@media (min-width:992px){
+    .container{
+        width:970px;
+    }
+
+}
+/*** larage screen **/
+@media (min-width:1200px){
+    .container{
+        width: 1000px;
+
+    }
+}
